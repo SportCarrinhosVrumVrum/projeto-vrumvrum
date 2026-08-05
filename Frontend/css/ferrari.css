@@ -48,3 +48,87 @@ p {
     font-size: 12px;
     color: #888;
 }
+
+#abrir, #abrir2 {
+    background-color: #ff2800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#abrir:hover, #abrir2:hover {
+    background-color: #cc2000;
+    transform: scale(1.05);
+}
+
+dialog {
+    background-color: #1e1e1e;
+    color: white;
+    border: 2px solid #ff2800;
+    border-radius: 12px;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    text-align: left;
+}
+
+dialog[open] {
+    animation: aparecer 0.4s ease forwards;
+}
+
+dialog h2 {
+    color: #ff2800;
+    margin-top: 0;
+    font-size: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+dialog p {
+    color: #ddd;
+    line-height: 1.6;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+dialog button {
+    background-color: transparent;
+    color: #aaa;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    transition: all 0.3s ease;
+}
+
+dialog button:hover {
+    background-color: #ff2800;
+    color: white;
+    border-color: #ff2800;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+/* Animação Fade-In */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

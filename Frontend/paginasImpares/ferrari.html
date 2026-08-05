@@ -9,14 +9,35 @@
 <body>
 
     <div class="card">
-        <!-- Coloquei uma imagem da internet para você testar. Depois troque para "/img/f40_convertida.webp" -->
         <img src="/img/f40_convertida.webp" alt="Ferrari F40">
         
         <div class="info">
             <h1>Ferrari F40</h1>
             <p>O V8 Biturbo que marcou a história.</p>
             
+            <div class="box">
+
+                <div class="modals">
+                    <button id="abrir">Informações</button>
+                <dialog id="ferrariInfo">
+                    <h2>A última dança de Enzo Ferrari</h2>
+                    <p>Ferrari F40 é um superesportivo icônico lançado em 1987 para celebrar o 40º aniversário da marca italiana. Foi o último modelo aprovado pessoalmente pelo fundador Enzo Ferrari. Reconhecida por sua condução crua e visceral, destacou-se mundialmente por ser o primeiro veículo de produção em série a ultrapassar a marca de 320 km/h.</p>
+                    <button id="fechar">Fechar</button>
+                </dialog>
+
+                <button id="abrir2">Especificações</button>
+                <dialog id="ferrariEspec">
+                    <h2>Especificações</h2>
+                <p>A Ferrari F40, lançada em 1987 para celebrar os 40 anos da marca, possui motor central-traseiro V8 2.9L biturbo de 478 cv a 7.000 rpm e 58,8 kgfm de torque a 4.000 rpm. Pesa apenas 1.100 kg, vai de 0 a 100 km/h em 3,8 segundos e atinge velocidade máxima de 324 km/h.</p>
+                <button id="fechar2">fechar</button>
+                </dialog>
+                
             
+                </div>
+            </div>
+            
+
+            <script src="/js/ferrari.js"></script>
 
 </body>
 </html>
