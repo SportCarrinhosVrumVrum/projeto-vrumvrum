@@ -6,8 +6,17 @@
 }
 
 body{
-    background:#ffffff;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-racing-car-is-going-at-speeds-down-an-asphalt-racetrack-image_2894230.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     color:#444;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 :root{
@@ -25,7 +34,7 @@ header{
     align-items:center;
     position:sticky;
     top:0;
-    background:rgba(112, 112, 112, 0.648);
+    background:rgb(79, 79, 79);
     box-shadow:0 3px 12px rgba(0,0,0,.05);
     z-index:100;
 }
@@ -67,10 +76,11 @@ button{
 footer{
 
     background:#ffffff;
-    padding:35px;
+    padding: 35px;
     text-align:center;
     color:#888;
     border-top:1px solid #eee;
+    margin-bottom: 0p;
 }
 
 .box h1{
