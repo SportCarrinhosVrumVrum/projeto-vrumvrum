@@ -113,3 +113,9 @@ button:hover {
     border: 2px solid #ffffff;
 
 }
+
+.btn-pagani {
+    background-color: white;
+    color: black;
+    border: 2px solid red
+}
