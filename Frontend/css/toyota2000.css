@@ -1,0 +1,150 @@
+:root {
+    --bg-fundo: #121212;
+        --bg-card: #1e1e1e;
+    --amarelo: #ff0000b2;
+    --amarelo-hover: #ae6a6a;
+    --preto: #000000;
+    --texto-principal: #ffffff;
+    --texto-suave: #aaa;
+    --texto-sub: #888;
+    --borda-sutil: #2e2e2e;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: var(--texto-principal);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+}
+
+h1 {
+    color: var(--amarelo);
+    margin: 18px 0 6px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+#abrir,
+#abrir2,
+#abrir3 {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    border: none;
+    padding: 12px 24px;
+    margin: 16px 6px 0;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#abrir:hover,
+#abrir2:hover,
+#abrir3:hover {
+    background-color: var(--amarelo-hover);
+    color: var(--texto-principal);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 51, 204, 0.4);
+}
+
+dialog {
+    background-color: var(--bg-card);
+    color: var(--texto-principal);
+    border: 2px solid var(--amarelo);
+    border-radius: 18px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    text-align: left;
+}
+
+dialog[open] {
+    animation: aparecerSuave 2.0s ease-in-out forwards;
+}
+
+dialog h2 {
+    color: var(--amarelo);
+    margin-top: 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--borda-sutil);
+    padding-bottom: 12px;
+}
+
+
+
+dialog button {
+    background-color: transparent;
+    color: var(--texto-suave);
+    border: 1px solid #444;
+    padding: 9px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+    margin-left: auto;
+    transition: all 0.25s ease;
+}
+
+dialog button:hover {
+    background-color: var(--amarelo);
+    color: var(--preto);
+    border-color: var(--amarelo);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+@keyframes aparecerSuave {
+    from {
+        opacity: 1;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
